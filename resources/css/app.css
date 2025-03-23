@@ -9,4 +9,20 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-cinzel: 'Cinzel';
+    --font-montserrat: 'Montserrat';
+}
+:root{
+    --golden-sand: #DBB77C;
+    --deep-teal: #037B75;
+    --walnut-brown: #7F5B2B;
+    --soft-ivory: #F1E9D9;
+}
+
+.text-golden-sand {
+    color: var(--golden-sand);
+}
+
+.bg-ivory{
+    background: var(--soft-ivory);
 }
