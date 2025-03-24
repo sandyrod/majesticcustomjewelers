@@ -30,7 +30,7 @@
         </p>
         <!-- Información de contacto -->
         <p class="font-montserrat text-[#7F5B2B] text-lg leading-relaxed mb-6">
-            In the meantime, you can contact us at <span class="text-[#DBB77C] font-bold">majesticjewelersmarketing@gmail.com</span> o seguirnos en nuestras redes sociales.
+            In the meantime, you can contact us at <span class="text-[#DBB77C] font-bold">majesticjewelersmarketing@gmail.com</span> Or follow us on our social networks.
         </p>
         <!-- Pie de página -->
         <div class="font-montserrat text-[#7F5B2B] text-sm">
