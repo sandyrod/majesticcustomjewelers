@@ -41,8 +41,8 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="icofont-envelope"></i><a href="mailto:majesticjewelersmarketing@gmail.com">majesticjewelersmarketing@gmail.com</a>
-        <i class="icofont-phone"></i> +1 385-227-4246
+        <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}">{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}</a>
+        <i class="icofont-phone"></i> {{ $company->phone ?? '+1 385-227-4246'}}
       </div>
       <div class="social-links float-right">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
@@ -81,9 +81,7 @@
                   <li><a href="#">Subcategory 4</a></li>
                   <li><a href="#">Subcategory 5</a></li>
                 </ul>
-              </li>
-              <li><a href="#">Category 3</a></li>
-              <li><a href="#">Category 4</a></li>
+              </li>              
               <li><a href="#">Category 5</a></li> -->
               @empty
               <li><a href="#">Category 1</a></li>
@@ -362,7 +360,7 @@
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               @forelse($categories as $category)
-              <li data-filter=".filter-app">{{ $category->category }}</li>
+              <li data-filter=".filter-{{ $category->id }}">{{ $category->category }}</li>
               @empty
               <li data-filter=".filter-app">Category 1</li>
               <li data-filter=".filter-card">Category 2</li>
@@ -581,7 +579,14 @@
         </div>
 
         <div class="row  d-flex align-items-stretch">
-
+          @forelse($faqs as $faq)
+          <div class="col-lg-6 faq-item" data-aos="fade-up">
+            <h4>{{ $faq->title }}?</h4>
+            <p>
+              {{ $faq->answer }}
+            </p>
+          </div>
+          @empty
           <div class="col-lg-6 faq-item" data-aos="fade-up">
             <h4>Non consectetur a erat nam at lectus urna duis?</h4>
             <p>
@@ -623,7 +628,7 @@
               Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
             </p>
           </div>
-
+        @endforelse
         </div>
 
       </div>
@@ -643,7 +648,7 @@
             <div class="info-box">
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>{{ $company->address ?? 'A108 Adam Street, New York, NY 535022'}}</p>
             </div>
           </div>
 
@@ -651,7 +656,7 @@
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>info@example.com<br>contact@example.com</p>
+              <p>{{ $company->email ?? 'info@example.com' }}</p>
             </div>
           </div>
 
@@ -659,7 +664,7 @@
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+              <p>{{ $company->phone ?? '+1 5589 55488 55'}}</p>
             </div>
           </div>
 
@@ -708,10 +713,9 @@
           <div class="col-lg-4 col-md-6 footer-info">
             <h3>MAJESTIC</h3>
             <p>
-              Illinois 5th Street <br>
-              535022, USA<br><br>
-              <strong>Phone:</strong> +1 3215 98765 33<br>
-              <strong>Email:</strong> majestic@example.com<br>
+              {{ $company->address ?? '' }}
+              <strong>Phone:</strong> {{ $company->phone ?? '+1 3215 98765 33' }}<br>
+              <strong>Email:</strong> {{ $company->email ?? 'majestic@example.com' }}<br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -736,11 +740,15 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Categories</h4>
             <ul>
+              @forelse($categories as $category)
+              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ $category->category }}</a></li>
+              @empty
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 1</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 2</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 3</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 4</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 5</a></li>
+              @endforelse
             </ul>
           </div>
 

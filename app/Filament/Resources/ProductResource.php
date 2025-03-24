@@ -54,6 +54,12 @@ class ProductResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('product')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('images.image')
+                ->label('Imagen')
+                ->getStateUsing(function ($record) {
+                    // Obtener la primera imagen del producto
+                    return $record->images->first()?->image;
+                }),
                 Tables\Columns\TextColumn::make('code')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
@@ -73,6 +79,7 @@ class ProductResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
