@@ -541,8 +541,10 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Our Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
+          <h2>The Majestic Family</h2>
+          <p>At Majestic Custom Jewelers, we believe that every piece of jewelry tells a story, and so does our team. As a proud family-owned business, we pour our heart and passion into every creation.</p>
+          <p>Meet Miguel and his family, the heart and soul behind Majestic. With years of craftsmanship passed down through generations, they are dedicated to bringing your vision to life with care, precision, and a personal touch.</p>
+          <p>When you choose Majestic Custom Jewelers, you’re not just supporting a business—you’re becoming part of our family.</p>
         </div>
 
         <div class="row">
