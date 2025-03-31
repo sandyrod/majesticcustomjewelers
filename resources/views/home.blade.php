@@ -546,10 +546,22 @@
           <p>Meet Miguel and his family, the heart and soul behind Majestic. With years of craftsmanship passed down through generations, they are dedicated to bringing your vision to life with care, precision, and a personal touch.</p>
           <p>When you choose Majestic Custom Jewelers, you’re not just supporting a business—you’re becoming part of our family.</p>
         </div>
+        <div class="row" style="margin:20px;"><p></p><p></p><p></p></div>
+        <div class="row justify-content-center">
 
-        <div class="row">
-
-        @forelse($teams as $team)
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('storage/img/team/family1.jpeg') }}" class="img-fluid" alt=""></div>
+              
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('storage/img/team/family2.jpeg') }}" class="img-fluid" alt=""></div>
+              
+            </div>
+        </div>
+        <!-- @forelse($teams as $team)
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
               <div class="pic"><img src="{{ asset('storage/'.$team->photo) }}" class="img-fluid" alt=""></div>
@@ -613,7 +625,7 @@
               </div>
             </div>
           </div>
-        @endforelse
+        @endforelse -->
         </div>
 
       </div>
