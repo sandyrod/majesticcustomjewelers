@@ -398,7 +398,7 @@
                 <h4>{{ $product->name }}</h4>
                 <p>{{ $product->category}}</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('storage/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
+                  <a href="{{ @asset('storage/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
                   <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
                 </div>
               </div>
