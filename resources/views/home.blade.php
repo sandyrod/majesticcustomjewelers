@@ -205,7 +205,7 @@
               <p>{{ $about->description ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum, tempora alias praesentium deleniti eligendi quo. Et doloribus totam aperiam molestias, animi sapiente est in quos praesentium, reprehenderit vero numquam.' }}</p>
             </div>
 
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <!-- <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bxs-heart"></i></div>
               <h4 class="title"><a href="">{{ $about->firstSubtitle ?? 'Lorem Ipsum' }}</a></h4>
               <p class="description">{{ $about->firstDescription ?? 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat velit ipsa voluptate sequi quam saepe esse quisquam exercitationem accusantium quaerat, eaque aut excepturi culpa dignissimos itaque doloribus sint eos? Dolores?' }}</p>
@@ -215,7 +215,7 @@
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><a href="">{{ $about->secondSubtitle ?? 'Nemo Enim' }}</a></h4>
               <p class="description">{{ $about->secondDescription ?? 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque' }}</p>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -371,7 +371,7 @@
 
         <div class="section-title">
           <h2>Our Jewels</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Discover the brilliance of our handcrafted jewelry collections, designed to make every moment unforgettable. From timeless classics to modern masterpieces, our pieces are crafted with precision and passion.</p>
         </div>
 
         <div class="row">
