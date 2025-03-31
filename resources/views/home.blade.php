@@ -202,7 +202,7 @@
 
             <div class="section-title">
               <h2>{{ $about->title ?? 'About Us' }}</h2>
-              <p>{{ $about->decription ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum, tempora alias praesentium deleniti eligendi quo. Et doloribus totam aperiam molestias, animi sapiente est in quos praesentium, reprehenderit vero numquam.' }}</p>
+              <p>{{ $about->description ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum, tempora alias praesentium deleniti eligendi quo. Et doloribus totam aperiam molestias, animi sapiente est in quos praesentium, reprehenderit vero numquam.' }}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
