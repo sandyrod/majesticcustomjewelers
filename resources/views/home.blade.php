@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="{{ asset('storage/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('storage//img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('storage/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
@@ -116,6 +116,17 @@
 
         <div class="carousel-inner" role="listbox">
 
+          @forelse($heroes as $hero)
+          <div class="carousel-item active" style="background-image: url({{ asset('storage/img/slide/slide-1.jpg') }});">
+            <div class="carousel-container">
+              <div class="carousel-content container">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MAJESTIC</span></h2>
+                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              </div>
+            </div>
+          </div>
+          @empty
           <!-- Slide 1 -->
           <div class="carousel-item active" style="background-image: url({{ asset('storage/img/slide/slide-1.jpg') }});">
             <div class="carousel-container">
@@ -128,7 +139,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(asset('storage/img/slide/slide-6.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-6.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
@@ -139,7 +150,7 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url(asset('storage/img/slide/slide-5.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-5.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -150,7 +161,7 @@
           </div>
 
           <!-- Slide 4 -->
-          <div class="carousel-item" style="background-image: url(asset('storage/img/slide/slide-4.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-4.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -159,7 +170,7 @@
               </div>
             </div>
           </div>
-
+          @endforelse
         </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -184,26 +195,26 @@
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
             <img src="{{ asset('storage/img/about.jpg') }}" class="img-fluid" alt="">
-            <a href="https://youtu.be/nWVtCJ1iR-c?si=ARignzlIfOrUR_em" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <a href="{{ $about->videoUrl ?? 'https://youtu.be/nWVtCJ1iR-c?si=ARignzlIfOrUR_em' }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
 
             <div class="section-title">
-              <h2>About Us</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum, tempora alias praesentium deleniti eligendi quo. Et doloribus totam aperiam molestias, animi sapiente est in quos praesentium, reprehenderit vero numquam.</p>
+              <h2>{{ $about->title ?? 'About Us' }}</h2>
+              <p>{{ $about->subTitle ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum, tempora alias praesentium deleniti eligendi quo. Et doloribus totam aperiam molestias, animi sapiente est in quos praesentium, reprehenderit vero numquam.' }}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bxs-heart"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat velit ipsa voluptate sequi quam saepe esse quisquam exercitationem accusantium quaerat, eaque aut excepturi culpa dignissimos itaque doloribus sint eos? Dolores?</p>
+              <h4 class="title"><a href="">{{ $about->firstSubtitle ?? 'Lorem Ipsum' }}</a></h4>
+              <p class="description">{{ $about->firstDescription ?? 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat velit ipsa voluptate sequi quam saepe esse quisquam exercitationem accusantium quaerat, eaque aut excepturi culpa dignissimos itaque doloribus sint eos? Dolores?' }}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <h4 class="title"><a href="">{{ $about->secondSubtitle ?? 'Nemo Enim' }}</a></h4>
+              <p class="description">{{ $about->secondDescription ?? 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque' }}</p>
             </div>
 
           </div>
@@ -311,6 +322,13 @@
         </div>
 
         <div class="row">
+          @forelse($services as $service)
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="{{ $service->logo }}"></i></div>
+            <h4 class="title"><a href="">{{ $service->title }}</a></h4>
+            <p class="description">{{ $service->description }}</p>
+          </div>
+          @empty
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="icofont-computer"></i></div>
             <h4 class="title"><a href="">Lorem Ipsum</a></h4>
@@ -341,6 +359,7 @@
             <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
             <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
           </div>
+          @endforelse
         </div>
 
       </div>
@@ -371,7 +390,21 @@
         </div>
 
         <div class="row portfolio-container">
-
+          @forelse ($products as $product)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{ asset('storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{ $product->name }}</h4>
+                <p>{{ $product->category}}</p>
+                <div class="portfolio-links">
+                  <a href="{{ asset('storage/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          @empty
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="{{ asset('storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
@@ -497,7 +530,7 @@
               </div>
             </div>
           </div>
-
+          @endforelse
         </div>
 
       </div>
@@ -514,8 +547,23 @@
 
         <div class="row">
 
-          <div class="col-xl-1 col-lg-2 col-md-6" data-aos="fade-up">
+        @forelse($teams as $team)
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <div class="pic"><img src="{{ asset('storage/'.$team->photo) }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>{{ $team->name }}</h4>
+                <span>{{ $team->name }}</span>
+                <div class="social">
+                  <a href="{{ $team->x ?? '#' }}"><i class="icofont-twitter"></i></a>
+                  <a href="{{ $team->facebook ?? '#' }}"><i class="icofont-facebook"></i></a>
+                  <a href="{{ $team->instagram ?? '#' }}"><i class="icofont-instagram"></i></a>
+                  <a href="{{ $team->linkedin ?? '#' }}"><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
+        @empty
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
               <div class="pic"><img src="{{ asset('storage/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
@@ -548,7 +596,6 @@
             </div>
           </div>
 
-          
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="pic"><img src="{{ asset('storage/img/team/team-4.jpg') }}" class="img-fluid" alt=""></div>
@@ -564,7 +611,7 @@
               </div>
             </div>
           </div>
-
+        @endforelse
         </div>
 
       </div>
