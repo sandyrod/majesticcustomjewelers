@@ -214,4 +214,38 @@
     aos_init();
   });
 
+  // Click handler para los enlaces del menú que filtran el portafolio
+$(document).on('click', '.portfolio-filter-link', function(e) {
+  e.preventDefault();
+  
+  // 1. Obtener el filtro (ej: ".filter-1")
+  var filterValue = $(this).data('filter');
+  
+  // 2. Desplazarse a la sección portfolio (usando tu lógica existente de smooth scroll)
+  var target = $('#portfolio');
+  if (target.length) {
+      var scrollto = target.offset().top - $('#header').outerHeight() + 2;
+      $('html, body').animate({
+          scrollTop: scrollto
+      }, 1500, 'easeInOutExpo');
+  }
+  
+  // 3. Activar el filtro correspondiente en #portfolio-flters
+  $('#portfolio-flters li').removeClass('filter-active');
+  $('#portfolio-flters li[data-filter="' + filterValue + '"]').addClass('filter-active');
+  
+  // 4. Aplicar el filtro en Isotope
+  $('.portfolio-container').isotope({ filter: filterValue });
+  
+  // 5. Re-iniciar AOS (para animaciones)
+  aos_init();
+  
+  // 6. Cerrar el menú móvil si está abierto (opcional)
+  if ($('body').hasClass('mobile-nav-active')) {
+      $('body').removeClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+      $('.mobile-nav-overly').fadeOut();
+  }
+});
+
 })(jQuery);

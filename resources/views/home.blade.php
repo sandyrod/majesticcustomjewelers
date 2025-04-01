@@ -72,7 +72,8 @@
           <li class="drop-down"><a href="">Categories</a>
             <ul>
               @forelse($categories as $category)
-              <li><a href="#">{{ $category->category }}</a></li>
+              <li><a href="#portfolio" class="portfolio-filter-link" data-filter=".filter-{{ $category->id }}">{{ $category->category }}
+              </a></li>
               <!-- <li class="drop-down"><a href="#">Category 2</a>
                 <ul>
                   <li><a href="#">Subcategory 1</a></li>
@@ -393,12 +394,12 @@
           @forelse ($products as $product)
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->productcategory->first()->category_id ?? '1'}}">
             <div class="portfolio-wrap">
-              <img src="{{ asset('storage/img/'.$product->images->first()->image ?? 'storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ @asset('storage/img/'.$product->images->first()->image ?? 'storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{ $product->product }}</h4>
                 <p>{{ $product->category}}</p>
                 <div class="portfolio-links">
-                  <a href="{{ @asset('storage/img/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
+                  <a href="{{ @asset('storage/img/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="{{ $product->product }}"><i class="icofont-eye"></i></a>
                   <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
                 </div>
               </div>
@@ -799,10 +800,15 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Categories</h4>
+            <h4>Categories. </h4>
             <ul>
               @forelse($categories as $category)
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ $category->category }}</a></li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#portfolio" class="portfolio-filter-link" data-filter=".filter-{{ $category->id }}">{{ $category->category }}
+                </a>
+              </li>
+              
               @empty
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 1</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Category 2</a></li>
