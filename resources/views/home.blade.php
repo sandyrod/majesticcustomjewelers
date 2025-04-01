@@ -133,7 +133,7 @@
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MAJESTIC</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animate__animated animate__fadeInUp">Experience the art of transforming your story into one of a kind, handcrafted jewelry. At Majestic, we believe every piece should embody your individuality crafted with passion, precision, and unmatched dedication. Let us create something truly exceptional just for you.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
@@ -143,8 +143,8 @@
           <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-6.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">Custom Jewelry Design</h2>
+                <p class="animate__animated animate__fadeInUp">Transform your ideas into reality with our expert custom jewelry design service. Whether it's an engagement ring, a unique pendant, or a personalized gift, we create one-of-a-kind pieces that reflect your style and story.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
@@ -154,8 +154,8 @@
           <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-5.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animate__animated animate__fadeInDown">Jewelry Redesign & Restoration</h2>
+                <p class="animate__animated animate__fadeInUp">Give new life to your heirloom pieces or outdated designs. Our restoration and redesign services preserve the sentimental value while enhancing the beauty and functionality of your jewelry.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
@@ -165,8 +165,8 @@
           <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-4.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur voluptates vitae dolores magnam maxime, architecto nesciunt ut, alias dicta, delectus. Quo, est adipisci autem ipsam sed cumque eos veniam.</p>
+                <h2 class="animate__animated animate__fadeInDown">Appraisals with Photo Documentation</h2>
+                <p class="animate__animated animate__fadeInUp">Know the true value of your precious items with our detailed appraisal service. We provide accurate evaluations along with high-quality photographs for your records and insurance purposes.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
