@@ -129,45 +129,45 @@
           </div>
           @empty
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url({{ asset('storage/img/slide/slide-1.jpg') }});">
+          <div class="carousel-item active" style="background-image: url({{ asset('storage/img/slide/6.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MAJESTIC</span></h2>
                 <p class="animate__animated animate__fadeInUp">Experience the art of transforming your story into one of a kind, handcrafted jewelry. At Majestic, we believe every piece should embody your individuality crafted with passion, precision, and unmatched dedication. Let us create something truly exceptional just for you.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-6.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/7.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Custom Jewelry Design</h2>
                 <p class="animate__animated animate__fadeInUp">Transform your ideas into reality with our expert custom jewelry design service. Whether it's an engagement ring, a unique pendant, or a personalized gift, we create one-of-a-kind pieces that reflect your style and story.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-5.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/8.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Jewelry Redesign & Restoration</h2>
                 <p class="animate__animated animate__fadeInUp">Give new life to your heirloom pieces or outdated designs. Our restoration and redesign services preserve the sentimental value while enhancing the beauty and functionality of your jewelry.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
               </div>
             </div>
           </div>
 
           <!-- Slide 4 -->
-          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/slide-4.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/9.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Appraisals with Photo Documentation</h2>
                 <p class="animate__animated animate__fadeInUp">Know the true value of your precious items with our detailed appraisal service. We provide accurate evaluations along with high-quality photographs for your records and insurance purposes.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
               </div>
             </div>
           </div>
