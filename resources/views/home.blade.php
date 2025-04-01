@@ -122,7 +122,7 @@
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MAJESTIC</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animate__animated animate__fadeInUp">Experience the art of transforming your story into one of a kind, handcrafted jewelry. At Majestic, we believe every piece should embody your individuality crafted with passion, precision, and unmatched dedication. Let us create something truly exceptional just for you.</p>
                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
