@@ -391,7 +391,7 @@
 
         <div class="row portfolio-container">
           @forelse ($products as $product)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->category->id }}">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->productcategory->first()->category_id ?? '1'}}">
             <div class="portfolio-wrap">
               <img src="{{ asset('storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
