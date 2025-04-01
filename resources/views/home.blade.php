@@ -393,12 +393,12 @@
           @forelse ($products as $product)
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->productcategory->first()->category_id ?? '1'}}">
             <div class="portfolio-wrap">
-              <img src="{{ asset('storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ asset('storage/img/'.$product->images->first()->image ?? 'storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{ $product->product }}</h4>
                 <p>{{ $product->category}}</p>
                 <div class="portfolio-links">
-                  <a href="{{ @asset('storage/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
+                  <a href="{{ @asset('storage/img/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
                   <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
                 </div>
               </div>
