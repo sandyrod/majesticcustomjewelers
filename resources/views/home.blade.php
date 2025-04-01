@@ -391,11 +391,11 @@
 
         <div class="row portfolio-container">
           @forelse ($products as $product)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->category->id }}">
             <div class="portfolio-wrap">
               <img src="{{ asset('storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>{{ $product->name }}</h4>
+                <h4>{{ $product->product }}</h4>
                 <p>{{ $product->category}}</p>
                 <div class="portfolio-links">
                   <a href="{{ @asset('storage/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="Name 1"><i class="icofont-eye"></i></a>
