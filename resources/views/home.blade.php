@@ -162,7 +162,7 @@
           </div>
 
           <!-- Slide 4 -->
-          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/9.jpg') }});">
+          <div class="carousel-item" style="background-image: url({{ asset('storage/img/slide/10.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Appraisals with Photo Documentation</h2>
