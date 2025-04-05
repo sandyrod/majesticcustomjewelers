@@ -8,7 +8,7 @@
   <title>MAJESTIC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Favicons -->
   <link href="{{ asset('storage/img/favicon.png') }}" rel="icon">
   <link href="{{ asset('storage/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -731,32 +731,94 @@
           </div>
 
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+    <form id="contactForm" method="POST" action="{{ route('contact.store') }}" class="php-email-form">
+        @csrf
+        <div class="form-row">
+            <div class="col-lg-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required minlength="4">
                 <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+            </div>
+            <div class="col-lg-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required minlength="4">
+            <div class="validate"></div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" required placeholder="Message"></textarea>
+            <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+    </form>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const loading = form.querySelector('.loading');
+    const errorMessage = form.querySelector('.error-message');
+    const sentMessage = form.querySelector('.sent-message');
+    
+    // Ocultar todos los mensajes y mostrar loading
+    loading.style.display = 'block';
+    errorMessage.style.display = 'none';
+    sentMessage.style.display = 'none';
+
+    try {
+        // Obtener el token CSRF
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+        
+        // Crear FormData
+        const formData = new FormData(form);
+        
+        // Enviar la solicitud
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfToken,
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            credentials: 'include'
+        });
+
+        // Procesar la respuesta
+        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(data.message || 'Error en el servidor');
+        }
+
+        // Mostrar mensaje de éxito
+        sentMessage.style.display = 'block';
+        sentMessage.textContent = data.message || '¡Mensaje enviado con éxito!';
+        
+        // Opcional: Resetear el formulario después de 3 segundos
+        setTimeout(() => {
+            form.reset();
+            sentMessage.style.display = 'none';
+        }, 3000);
+
+    } catch (error) {
+        console.error('Error:', error);
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = error.message || 'Error al enviar el mensaje';
+    } finally {
+        loading.style.display = 'none';
+    }
+});
+</script>
           </div>
 
         </div>
@@ -832,7 +894,7 @@
   <script src="{{ asset('storage/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('storage/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('storage/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('storage/vendor/php-email-form/validate.js') }}"></script>
+  <!-- <script src="{{ asset('storage/vendor/php-email-form/validate.js') }}"></script> -->
   <script src="{{ asset('storage/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
   <script src="{{ asset('storage/vendor/venobox/venobox.min.js') }}"></script>
   <script src="{{ asset('storage/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
