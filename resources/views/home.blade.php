@@ -710,7 +710,7 @@
             <div class="info-box">
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
-              <p>{{ $company->address ?? 'A108 Adam Street, New York, NY 535022'}}</p>
+              <p>{{ $company->address ?? '75 East Fort Union Blvd suite 128'}}</p>
             </div>
           </div>
 
@@ -726,7 +726,7 @@
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>{{ $company->phone ?? '+1 5589 55488 55'}}</p>
+              <p>{{ $company->phone ?? '+1 385-227-4246'}}</p>
             </div>
           </div>
 
@@ -837,8 +837,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
           <div class="col-lg-4 col-md-6 footer-info">
             <h3>MAJESTIC</h3>
             <p>
-              {{ $company->address ?? '' }}
-              <strong>Phone:</strong> {{ $company->phone ?? '+1 3215 98765 33' }}<br>
+              {{ $company->address ?? '75 East Fort Union Blvd suite 128' }}
+              <strong>Phone:</strong> {{ $company->phone ?? '+1 385-227-4246' }}<br>
               <strong>Email:</strong> {{ $company->email ?? 'majestic@example.com' }}<br>
             </p>
             <div class="social-links mt-3">
