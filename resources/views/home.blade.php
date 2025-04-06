@@ -41,7 +41,7 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}">{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}</a>
+        <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}">{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}</a>
         <i class="icofont-phone"></i> {{ $company->phone ?? '+1 385-227-4246'}}
       </div>
       <div class="social-links float-right">
@@ -718,7 +718,7 @@
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>{{ $company->email ?? 'info@example.com' }}</p>
+              <p>{{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}</p>
             </div>
           </div>
 
@@ -837,9 +837,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
           <div class="col-lg-4 col-md-6 footer-info">
             <h3>MAJESTIC</h3>
             <p>
-              {{ $company->address ?? '75 East Fort Union Blvd suite 128' }}
+              {{ $company->address ?? '75 East Fort Union Blvd suite 128' }}<br>
               <strong>Phone:</strong> {{ $company->phone ?? '+1 385-227-4246' }}<br>
-              <strong>Email:</strong> {{ $company->email ?? 'majestic@example.com' }}<br>
+              <strong>Email:</strong> {{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}<br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
