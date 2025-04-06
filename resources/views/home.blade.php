@@ -47,7 +47,7 @@
       <div class="social-links float-right">
         <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="https://www.tiktok.com/@majesticcustomjewelers#" class="tiktok"><i class="icofont-tiktok"></i></a>
+        <a href="https://www.tiktok.com/@majesticcustomjewelers#" class="tiktok"><i class="fab fa-tiktok"></i></a>
         
       </div>
     </div>
@@ -841,11 +841,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
               <strong>Email:</strong> {{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="#" class="google-plus"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
 
