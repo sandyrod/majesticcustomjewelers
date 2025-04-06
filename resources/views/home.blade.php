@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Vendor CSS Files -->
   <link href="{{ asset('storage/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('storage/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
@@ -45,7 +45,6 @@
         <i class="icofont-phone"></i> {{ $company->phone ?? '+1 385-227-4246'}}
       </div>
       <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="https://www.tiktok.com/@majesticcustomjewelers#" class="tiktok"><i class="icofont-tiktok"></i></a>
@@ -324,7 +323,7 @@
 
         <div class="row">
           @forelse($services as $service)
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="{{ $service->logo }}"></i></div>
             <h4 class="title"><a href="">{{ $service->title }}</a></h4>
             <p class="description">{{ $service->description }}</p>
@@ -706,7 +705,7 @@
 
         <div class="row">
 
-          <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
             <div class="info-box">
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
@@ -714,7 +713,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
@@ -722,7 +721,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
