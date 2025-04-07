@@ -41,7 +41,7 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}">{{ $company->email ?? 'majesticjewelersmarketing@gmail.com'}}</a>
+        <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}">{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}</a>
         <i class="icofont-phone"></i> {{ $company->phone ?? '+1 385-227-4246'}}
       </div>
       <div class="social-links float-right">
