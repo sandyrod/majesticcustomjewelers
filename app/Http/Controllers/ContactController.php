@@ -15,6 +15,7 @@ class ContactController extends Controller
             $validated = $request->validate([
                 'name' => 'required|min:4',
                 'email' => 'required|email',
+                'phone' => 'nullable|string',
                 'subject' => 'required|min:4',
                 'message' => 'required',
             ]);
