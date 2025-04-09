@@ -19,6 +19,10 @@ class TeamResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $modelLabel = 'Family';
+
+    protected static ?string $pluralModelLabel = 'Families';
+
     public static function form(Form $form): Form
     {
         return $form
