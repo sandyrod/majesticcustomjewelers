@@ -37,6 +37,7 @@ class ContactMessageResource extends Resource
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('phone'),
                 Forms\Components\Textarea::make('message')
                     ->required()
                     ->columnSpanFull(),
@@ -60,11 +61,13 @@ class ContactMessageResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('subject')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('phone')
+                    ->searchable(),
                 Tables\Columns\SelectColumn::make('status')
                     ->options([
-                        'pending' => 'Pendiente',
-                        'attended' => 'Atendido',
-                        'high_priority' => 'Alta Prioridad',
+                        'pending' => 'Pending',
+                        'attended' => 'Attended',
+                        'high_priority' => 'High Priority',
                     ]),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
