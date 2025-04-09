@@ -19,7 +19,8 @@ class ContactController extends Controller
                 'subject' => 'required|min:4',
                 'message' => 'required',
             ]);
-
+            $validated['phone'] = $request->input('phone', null);
+            
             $message = ContactMessage::create($validated);
 
             // Enviar correo
