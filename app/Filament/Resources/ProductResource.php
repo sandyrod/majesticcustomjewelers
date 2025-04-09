@@ -34,6 +34,13 @@ class ProductResource extends Resource
                     ->required()
                     ->numeric()
                     ->prefix('$'),
+                Forms\Components\Select::make('showprice')
+                    ->options([
+                        'Y' => 'Yes',
+                        'N' => 'No',
+                    ])
+                    ->default('N')
+                    ->required(),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),

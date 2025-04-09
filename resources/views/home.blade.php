@@ -742,9 +742,15 @@
                 <div class="validate"></div>
             </div>
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required minlength="4">
-            <div class="validate"></div>
+        <div class="form-row">
+          <div class="col-lg-6 form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required minlength="4">
+              <div class="validate"></div>
+          </div>
+          <div class="col-lg-6 form-group">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+              <div class="validate"></div>
+          </div>
         </div>
         <div class="form-group">
             <textarea class="form-control" name="message" rows="5" required placeholder="Message"></textarea>
