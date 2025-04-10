@@ -56,7 +56,7 @@
       <div class="social-links float-right">
         <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="https://www.tiktok.com/@majesticcustomjewelers#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/@majesticcustomjewelers" class="tiktok"><i class="fab fa-tiktok"></i></a>
         
       </div>
     </div>
@@ -67,12 +67,12 @@
     <div class="container">
 
       <div class="logo float-left">
-        <a href="index.html"><img src="{{ asset('storage/img/logo_simbolo.png') }}" alt="" class="img-fluid"></a>
+        <a href="#"><img src="{{ asset('storage/img/logo_simbolo.png') }}" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Products</a></li>
@@ -856,9 +856,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
               <strong>Email:</strong> {{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.tiktok.com/@majesticcustomjewelers" class="tiktok"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
 
@@ -866,30 +866,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Products</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Categories. </h4>
-            <ul>
-              @forelse($categories as $category)
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#portfolio" class="portfolio-filter-link" data-filter=".filter-{{ $category->id }}">{{ $category->category }}
-                </a>
-              </li>
-              
-              @empty
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Category 1</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Category 2</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Category 3</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Category 4</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Category 5</a></li>
-              @endforelse
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Products</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Family</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
 
