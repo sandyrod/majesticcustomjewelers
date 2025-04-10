@@ -40,7 +40,11 @@
 
     gtag('config', 'AW-16992884960');
   </script>
-
+  <script>
+    gtag('config', 'AW-16992884960/2JYvCJXq7rYaEOCx66Y_', {
+      'phone_conversion_number': '3852274246'
+    });
+  </script>
   
 </head>
 
@@ -51,7 +55,8 @@
     <div class="container clearfix">
       <div class="contact-info float-left">
         <i class="icofont-envelope"></i><a href="mailto:{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}">{{ $company->email ?? 'majesticcustomjewelers@gmail.com'}}</a>
-        <i class="icofont-phone"></i> {{ $company->phone ?? '+1 385-227-4246'}}
+        <i class="icofont-phone"></i> <a href="tel:{{ preg_replace('/[^\d+]/', '', $company->phone ?? '+13852274246') }}">{{ $company->phone ?? '+1 385-227-4246' }}</a>
+
       </div>
       <div class="social-links float-right">
         <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="icofont-facebook"></i></a>
@@ -734,7 +739,7 @@
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>{{ $company->phone ?? '+1 385-227-4246'}}</p>
+              <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $company->phone ?? '+13852274246') }}">{{ $company->phone ?? '+1 385-227-4246' }}</a></p>
             </div>
           </div>
 
@@ -852,7 +857,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
             <h3>MAJESTIC</h3>
             <p>
               {{ $company->address ?? '75 East Fort Union Blvd suite 128' }}<br>
-              <strong>Phone:</strong> {{ $company->phone ?? '+1 385-227-4246' }}<br>
+              <strong>Phone:</strong> <a href="tel:{{ preg_replace('/[^\d+]/', '', $company->phone ?? '+13852274246') }}" style="color:#fff;">{{ $company->phone ?? '+1 385-227-4246' }}</a><br>
               <strong>Email:</strong> {{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}<br>
             </p>
             <div class="social-links mt-3">
