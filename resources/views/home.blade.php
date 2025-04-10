@@ -30,7 +30,16 @@
   <link href="{{ asset('storage/assets/vendor/aos/aos.css') }}" rel="stylesheet">
   @vite(['resources/css/style.css', 'resources/js/main.js'])
   <!-- Template Main CSS File -->
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16992884960">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16992884960');
+  </script>
 
   
 </head>
