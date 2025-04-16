@@ -409,14 +409,16 @@
             <div class="portfolio-wrap">
               <img src="{{ @asset('storage/img/'.$product->images->first()->image ?? 'storage/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>{{ $product->product }}</h4>
+                <h4>{{ $product->product }}<br>
+                   @if($product->showprice!= 'N')
+                   <span style="color:#fff">{{ $product->price }} $</span>
+                   @endif
+                </h4>
                 <p>{{ $product->category}}</p>
                 <div class="portfolio-links">
                   <a href="{{ @asset('storage/img/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="{{ $product->product }}"><i class="icofont-eye"></i></a>
                   <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
-                   @if($product->showprice!= 'N')
-                    {{ $product->price }} $
-                   @endif
+                   
                 </div>
               </div>
             </div>
