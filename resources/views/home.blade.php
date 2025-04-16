@@ -414,6 +414,9 @@
                 <div class="portfolio-links">
                   <a href="{{ @asset('storage/img/'.$product->images->first()->image) }}" data-gall="portfolioGallery" class="venobox" title="{{ $product->product }}"><i class="icofont-eye"></i></a>
                   <!-- <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a> -->
+                   @if($product->showprice!= 'N')
+                    {{ $product->price }} $
+                   @endif
                 </div>
               </div>
             </div>
