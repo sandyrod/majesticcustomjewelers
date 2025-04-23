@@ -209,7 +209,7 @@
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
             <img src="{{ asset('storage/img/about.jpg') }}" class="img-fluid" alt="">
-            <a href="{{ $about->videoUrl ?? 'https://youtu.be/nWVtCJ1iR-c?si=ARignzlIfOrUR_em' }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <a href="{{ $about->urlVideo ?? 'https://youtu.be/nWVtCJ1iR-c?si=ARignzlIfOrUR_em' }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
