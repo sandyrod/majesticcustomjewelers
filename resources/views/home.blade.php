@@ -59,9 +59,9 @@
 
       </div>
       <div class="social-links float-right">
-        <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="https://www.tiktok.com/@majesticcustomjewelers" class="tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="{{ $company->facebook ?? 'https://www.facebook.com/MajesticJewelersInc' }}" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="{{ $company->instagram ?? 'https://www.instagram.com/majesticcustomjewelers' }}" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="{{ $company->x ?? 'https://www.tiktok.com/@majesticcustomjewelers' }}" class="tiktok"><i class="fab fa-tiktok"></i></a>
         
       </div>
     </div>
@@ -866,9 +866,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
               <strong>Email:</strong> {{ $company->email ?? 'majesticcustomjewelers@gmail.com' }}<br>
             </p>
             <div class="social-links mt-3">
-              <a href="https://www.facebook.com/MajesticJewelersInc" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/majesticcustomjewelers" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.tiktok.com/@majesticcustomjewelers" class="tiktok"><i class="fab fa-tiktok"></i></a>
+              <a href="{{ $company->facebook ?? 'https://www.facebook.com/MajesticJewelersInc' }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="{{ $company->instagram ?? 'https://www.instagram.com/majesticcustomjewelers' }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="{{ $company->x ?? 'https://www.tiktok.com/@majesticcustomjewelers' }}" class="tiktok"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
 

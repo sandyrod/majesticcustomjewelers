@@ -59,6 +59,7 @@ class CompanyResource extends Resource
                 Tables\Columns\TextColumn::make('address')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('x')
+                    -label('Tiktok')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('facebook')
                     ->searchable(),
