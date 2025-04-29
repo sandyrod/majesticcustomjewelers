@@ -38,6 +38,7 @@ class CompanyResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('x')
+                    ->label('Tiktok')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('facebook')
                     ->maxLength(255),
@@ -59,7 +60,7 @@ class CompanyResource extends Resource
                 Tables\Columns\TextColumn::make('address')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('x')
-                    -label('Tiktok')
+                    ->label('Tiktok')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('facebook')
                     ->searchable(),
